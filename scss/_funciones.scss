@@ -1,0 +1,8 @@
+@import 'variable';
+
+@mixin theme ($theme: green){
+    background-color: $theme;
+    color: $white;
+    padding: 7px;
+    border-radius: 50%;
+}

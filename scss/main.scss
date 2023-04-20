@@ -1,0 +1,94 @@
+@import 'variable';
+@import 'funciones';
+
+body {
+    background-image: url('fondoW.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.column{
+    width: 18%;
+    margin-right: 1%;
+    vertical-align: top;
+    border-radius: 10px;
+    background-color: rgba($white, 0.7);
+    padding: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.card {
+    background-color: $white;
+    color: $black;
+    padding: 10px;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    overflow: auto;
+
+    &:hover{
+        background-color: $blue;
+        color: $black;
+
+        & .x i{
+            background-color: $black;
+        }
+
+        & .tag.front i{
+            color: $black;
+        }
+
+        & .tag.back i{
+            color: $black;
+        }
+
+        & .tag.device i{
+            color: $black;
+        }
+    }
+}
+
+i{
+    float:left;
+    margin-left: 4%;
+}
+
+.x {
+    position: relative;
+    margin-left: 90%;
+
+    i {
+      position: absolute;
+      font-size: 10px;
+      padding: 5px;
+      background-color: $red;
+      color: $white;
+      border-radius: 50%;
+    }
+}
+
+h1{
+    width: 100%;
+    font-weight: 400;
+    font-size: 25px;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    padding: 20px;
+    background-color: $blue-trans;
+    border-radius: 10px;
+    color: $white;
+    text-align: center;
+}
+
+.tag.front i{
+    @include theme
+}
+
+.tag.back i{
+    @include theme($theme: $red);
+}
+
+.tag.device i{
+    @include theme($theme: $yellow);
+}
